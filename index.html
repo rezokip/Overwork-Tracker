@@ -46,21 +46,27 @@
    
   <h2>Erfasste Stunden:</h2>
   <table class="print-section">
-    <tr class="print-section-head">
+    <thead class="print-section-head">
+    <tr>
       <th>Stunden</th>
       <th>Datum</th>
       <th>Anzahl Minuten</th>
       <th>Löschen</th>
     </tr>
-    <tr class="print-section-body">
+  </thead>  
+    
+  <tbody id="print-section-body-container" class="print-section-body">
+    <tr>
       <td>Plusstunden</td>
       <td>06.09.2022</td>
-      <td>30 Minuten</td>
-      <td><button>x</button></td>
+      <td >30</td>
+      <td  class="delete-button"><button>x</button></td>
     </tr>
 
-  </table>
+  </tbody>
 
+  </table>
+  
   <h2>Gesammtstunden:</h2>
   <table class="result-section">
     <tr class="result-section-head">
@@ -69,9 +75,9 @@
       <th>Übrige Stunden</th>
     </tr>
     <tr class="result-section-body">
-      <td>30 Minuten</td>
-      <td>0 Minuten</td>
-      <td>30 Minuten</td> 
+      <td>30 min</td>
+      <td>0 min</td>
+      <td>30 min</td> 
 
 
     </tr>

@@ -48,10 +48,10 @@ h2{
 }
 
 form{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 15px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+gap: 15px;
  
 }
 
@@ -60,7 +60,6 @@ max-width: 50px;
 }
 
 .button-container{
-
 margin: auto;
 }
 
@@ -89,7 +88,7 @@ color: white;
   margin-bottom: 100px;
 }
 
-.print-section-head, .result-section-head{
+.print-section-head tr, .result-section-head{
   font-size: 22px;
   font-weight: bold;
   display: flex;
@@ -98,7 +97,7 @@ color: white;
 
 
 
-.print-section-body, .result-section-body{
+.print-section-body tr, .result-section-body{
 display: flex;
 
 }
