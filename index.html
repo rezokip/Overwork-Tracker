@@ -47,23 +47,17 @@
   <h2>Erfasste Stunden:</h2>
   <table class="print-section">
     <thead class="print-section-head">
-    <tr>
-      <th>Stunden</th>
-      <th>Datum</th>
-      <th>Anzahl Minuten</th>
-      <th>Löschen</th>
-    </tr>
-  </thead>  
+      <tr>
+        <th>Stunden</th>
+        <th>Datum</th>
+        <th>Anzahl Minuten</th>
+        <th>Löschen</th>
+      </tr>
+    </thead>  
     
-  <tbody id="print-section-body-container" class="print-section-body">
-    <tr>
-      <td>Plusstunden</td>
-      <td>06.09.2022</td>
-      <td >30</td>
-      <td  class="delete-button"><button>x</button></td>
-    </tr>
-
-  </tbody>
+    <tbody id="capturedOverWorkContainer" class="print-section-body">
+    
+    </tbody>
 
   </table>
   
@@ -75,13 +69,10 @@
       <th>Übrige Stunden</th>
     </tr>
     <tr class="result-section-body">
-      <td>30 min</td>
-      <td>0 min</td>
-      <td>30 min</td> 
-
-
-    </tr>
-     
+      <td class="total-overwork-done"></td>
+      <td class="total-overwork-used"></td>
+      <td class="remaining-overwork"></td> 
+    </tr>    
   </table>
 
   <script src="script.js"></script>

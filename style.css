@@ -112,3 +112,10 @@ text-align: left;
 }
 
 
+.total-overwork-done {
+  color: green;
+}
+
+.total-overwork-used{
+  color: red;
+}
