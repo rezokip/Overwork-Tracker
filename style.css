@@ -1,0 +1,115 @@
+/* Reset*/
+
+*{
+  margin:0;
+  padding:0;
+  
+}
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+body{
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*formating head section*/
+
+.head-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  background-color: aqua;
+}
+
+h1{
+  font-size: clamp(30px ,5vw, 50px);
+}
+
+
+/*formating input section*/
+
+.record-section{
+  max-width: 670px;
+  border: solid;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+h2{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+ 
+}
+
+.amount-container input{
+max-width: 50px;
+}
+
+.button-container{
+
+margin: auto;
+}
+
+.add-button{
+font-size: 18px;
+padding: 5px 10px;
+border-radius: 10px;
+background-color: rgb(27, 160, 56);
+color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Formatting Tables*/
+
+.print-section, .result-section{
+  margin-bottom: 100px;
+}
+
+.print-section-head, .result-section-head{
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  background-color: lightgray;
+}
+
+
+
+.print-section-body, .result-section-body{
+display: flex;
+
+}
+
+.print-section-head th,
+.print-section-body td,
+.result-section-head th,
+.result-section-body td{
+flex: 1;
+border: solid 1px gray;
+text-align: left;
+}
+
+

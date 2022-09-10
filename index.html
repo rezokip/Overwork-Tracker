@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="head-section">
+    <h1>Überstunden Zähler</h1>
+  
+  </section>
+
+  <section class="record-section">
+    <h2 class="record-section-title"> Zeit erfassen: </h2>
+    <form class="record-section-form">
+
+      <div class="overtime-container">
+        <label for ="overtime-type">Stunden: </label>
+        <select name="types" id="overtime-type">
+          <option value="overtime-done">Plusstunden</option>
+          <option value="overtime-used">Minusstunden</option>
+        </select>
+      </div>
+      
+      <div class="date-container">
+        <label for ="date">Datum: </label>
+        <input type="date" id="date">
+      </div>
+      
+      <div class="amount-container">
+        <label for="amount">Anzahl Minuten:</label>
+        <input type="number" for="amount" step="30">
+      </div>
+
+      <div class="button-container">
+        <button class="add-button">Erfassen</button> 
+      </div>
+      
+      
+    </form> 
+  </section>
+   
+  <h2>Erfasste Stunden:</h2>
+  <table class="print-section">
+    <tr class="print-section-head">
+      <th>Stunden</th>
+      <th>Datum</th>
+      <th>Anzahl Minuten</th>
+      <th>Löschen</th>
+    </tr>
+    <tr class="print-section-body">
+      <td>Plusstunden</td>
+      <td>06.09.2022</td>
+      <td>30 Minuten</td>
+      <td><button>x</button></td>
+    </tr>
+
+  </table>
+
+  <h2>Gesammtstunden:</h2>
+  <table class="result-section">
+    <tr class="result-section-head">
+      <th>Plusstunden</th>
+      <th>Minusstunden</th>
+      <th>Übrige Stunden</th>
+    </tr>
+    <tr class="result-section-body">
+      <td>30 Minuten</td>
+      <td>0 Minuten</td>
+      <td>30 Minuten</td> 
+
+
+    </tr>
+     
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
