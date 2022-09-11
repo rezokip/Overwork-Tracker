@@ -4,10 +4,6 @@ let formElement = document.querySelector('.record-section-form')
 
 let state = {
   capturedOverwork: [
-    {overWorkType: "Plusstunden", overWorkDate: "06.09.2022", overWorkMinutes: 90, },
-    {overWorkType: "Minusstunden", overWorkDate: "09.09.2022", overWorkMinutes: 180, }, 
-    {overWorkType: "Plusstunden", overWorkDate: "06.09.2022", overWorkMinutes: 60, },
-    {overWorkType: "Minusstunden", overWorkDate: "16.09.2022", overWorkMinutes: 60, },
   ],
   
   
