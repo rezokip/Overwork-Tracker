@@ -1,5 +1,4 @@
 let addButton = document.querySelector('.add-button')
-let testButton = document.querySelector('.test-button')
 let formElement = document.querySelector('.record-section-form')
 
 
@@ -17,17 +16,6 @@ let state = {
   remainingOverworkHours: 0, 
   
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -57,6 +45,7 @@ let state = {
   // create a function to update the state everytime you refresh or click on the submit button
     // begin the state values with 0 to prevent adding values which already exist
     // call the Helper functions
+    // everytime you update the state store the state in the localstorage 
     // call the render function to render from scratch everytime you update 
       //(prevents double calling the objects, that already exist)
   function updateState(){
@@ -66,7 +55,7 @@ let state = {
     getTotalOverworkDone()
     getTotalOverworkUsed()
     getRemainingOverworkHours()
-    
+    localStorage.setItem('overworkCalculatorState', JSON.stringify(state))
     render()
   }
   
@@ -146,10 +135,7 @@ function render(){
   // by using splice method with the appropriate index when clicking the button
   // after deleting update the state to render the new DOM and get the updated values
     overWorkDeleteButton.addEventListener('click', function(){  
-      console.log(this.parentNode.parentNode)
-      console.log(i)
       state.capturedOverwork.splice(i,1)
-      console.log(state.capturedOverwork)
       updateState()
     })
   }
@@ -158,9 +144,15 @@ function render(){
 
 
 // function to initialize the State with the update functions
+// look if there is already a state in the localstorage
+  // if so then set it to the localstate
+// after getting the saved state update the state  
 
 function initState (){  
-  
+  let localState = JSON.parse(localStorage.getItem('overworkCalculatorState'))
+  if(localState!== null){
+    state = localState;
+  }
   updateState()
 }
 
@@ -169,52 +161,37 @@ initState()
 
 
 // Eventlistener for the Add Button.
-  // look if the formelement has values then 
-    // after clicking, get the values from the form (formElement[...].value) and
+  // look if the formelement has values,
+    // then after clicking, get the values from the form (formElement[...].value) and
       // push them to the capturedoverwork object 
     // now Update the State with the UpdateState function (to prevent double objects )
 
 
 addButton.addEventListener('click', function(){
-  console.log(formElement[2].value)
-})
-
-console.log(formElement[1].value)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-testButton.addEventListener('click', function(){
   if(formElement[0].value!='' && formElement[1].value!='' && formElement[2].value!=''){
     state.capturedOverwork.push(
       {overWorkType: formElement[0].value, 
       overWorkDate: formElement[1].value, 
       overWorkMinutes: Number(formElement[2].value), },
     )
-    console.log(state.capturedOverwork)
     updateState()
   }
   else {alert('Bitte vollständig ausfüllen')}
-  console.log(formElement[0].value)
-  console.log(formElement[1].value)
-  console.log(formElement[2].value)
   formElement[1].value= ''
   formElement[2].value= ''
   
- 
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
